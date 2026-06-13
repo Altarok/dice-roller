@@ -1,5 +1,5 @@
 {
-    "name": "@javalent/dice-roller",
+    "name": "dice-roller",
     "version": "11.4.2",
     "description": "Inline dice rolling for Obsidian.md",
     "main": "./dist/api.js",
@@ -16,22 +16,22 @@
     "devDependencies": {
         "@codemirror/language": "https://github.com/lishid/cm-language",
         "@javalent/components": "^1.0.1",
-        "@javalent/utilities": "^1.1.5",
+        "@javalent/utilities": "^1.1.6",
         "@sniptt/monads": "^0.5.10",
         "@tsconfig/svelte": "^5.0.4",
         "@types/he": "^1.1.2",
         "@types/moo": "^0.5.5",
-        "@types/node": "^14.14.2",
+        "@types/node": "^22.19.21",
         "@types/three": "^0.132.1",
         "builtin-modules": "^3.3.0",
         "cannon-es": "^0.18.0",
         "compare-versions": "^6.1.0",
         "dotenv": "^10.0.0",
-        "esbuild": "^0.19.11",
+        "esbuild": "^0.28.0",
         "esbuild-svelte": "^0.8.0",
         "fast-copy": "^3.0.1",
         "flowbite": "^2.3.0",
-        "flowbite-svelte": "^0.45.1",
+        "flowbite-svelte": "^1.33.1",
         "he": "^1.2.0",
         "monkey-around": "^2.2.0",
         "moo": "^0.5.1",
@@ -39,11 +39,15 @@
         "obsidian": "^1.5.7-1",
         "obsidian-dataview": "^0.4.25",
         "random-word-slugs": "^0.1.7",
-        "svelte": "^4.2.15",
+        "svelte": "^5.56.3",
         "svelte-preprocess": "^5.1.4",
         "three": "^0.137.0",
         "tslib": "^2.6.2",
         "typescript": "^5.4.5",
-        "vitest": "^0.33.0"
+        "vitest": "^4.1.8"
+    },
+    "allowScripts": {
+        "esbuild@0.28.1": true,
+        "svelte-preprocess@5.1.4": true
     }
 }

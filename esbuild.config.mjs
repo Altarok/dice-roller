@@ -16,8 +16,7 @@ if you want to view the source, please visit the github repository of this plugi
 `;
 
 const prod = process.argv[2] === "production";
-
-const dir = prod ? "./" : process.env.OUTDIR;
+const dir = prod ? "./" : (process.env.OUTDIR || "./");
 
 const parameters = {
     banner: {
@@ -57,7 +56,7 @@ const parameters = {
     format: "cjs",
     target: "es2022",
     logLevel: "info",
-    sourcemap: prod ? false : "inline",
+    sourcemap: prod ? false : true,
     minify: prod ? true : false,
     treeShaking: true,
     outdir: dir,

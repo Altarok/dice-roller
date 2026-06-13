@@ -90,7 +90,7 @@ abstract class DataViewEnabledRoller extends BasicRoller<SectionRoller> {
         }
 
         const files = new Set(
-            query.value.values.reduce((acc, curr) => {
+            query.value.values.reduce((acc: any, curr: any) => {
                 if (curr.type == "file") {
                     acc.push(curr.path);
                 }

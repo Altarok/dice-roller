@@ -4,10 +4,10 @@
 
     import { ExtraButtonComponent } from "obsidian";
     import { Icons } from "src/utils/icons";
-    import { createEventDispatcher } from "svelte";
     import type DiceRollerPlugin from "src/main";
     import type DiceView from "../view";
 
+    // Svelte 5 style props (can use export let for backward-compat layout)
     export let settings: DiceRollerSettings;
     export let plugin: DiceRollerPlugin;
     export let view: DiceView;
@@ -27,23 +27,29 @@
                 <div class="formula-container">
                     <div class="formula-actions">
                         <div
-                            use:roll
-                            on:click={() => {
+                                use:roll
+                                onclick={() => {
                                 view.roll(formula);
                             }}
-                        />
+                                onkeydown={() => {}}
+                                role="button"
+                                tabindex="0"
+                        ></div>
                         <span class="formula">{formula}</span>
                     </div>
                     <div
-                        use:trash
-                        on:click={async () => {
+                            use:trash
+                            onclick={async () => {
                             settings.customFormulas =
                                 settings.customFormulas.filter(
                                     (f) => f != formula
                                 );
                             plugin.saveSettings();
                         }}
-                    />
+                            onkeydown={() => {}}
+                            role="button"
+                            tabindex="0"
+                    ></div>
                 </div>
             {/each}
         </div>

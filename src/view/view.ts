@@ -113,8 +113,8 @@ export default class DiceView extends ItemView {
             this.addResult(result, false);
         }
 
-        this.buildButtons();
         this.buildFormula();
+        this.buildButtons();
     }
     #formula: Map<DiceIcon, number> = new Map();
     buildButtons() {
@@ -198,7 +198,8 @@ export default class DiceView extends ItemView {
     }
     setFormula() {
         if (!this.#formula.size && !this.#add) {
-            this.formulaComponent.inputEl.value = "";
+            // this.formulaComponent.inputEl.value = "";
+            this.formulaComponent.setValue('')
             return;
         }
         const formula: { formula: string; max: number; sign: "+" | "-" }[] = [];
@@ -244,9 +245,11 @@ export default class DiceView extends ItemView {
             }
             str.push(`${Math.abs(this.#add)}`);
         }
-        this.formulaComponent.inputEl.value = str.join(" ");
+        // this.formulaComponent.inputEl.value = str.join(" ");
+        this.formulaComponent.setValue(str.join(" "));
     }
-    async roll(formula = this.formulaComponent.inputEl.value) {
+    // async roll(formula = this.formulaComponent.inputEl.value)
+    async roll(formula = this.formulaComponent.getValue()) {
         if (!formula) {
             return;
         }

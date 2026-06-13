@@ -13,7 +13,7 @@ declare module "obsidian" {
 
 class DVManager extends Component {
     app: App;
-    api: DvAPIInterface;
+    api: any;
 
     inline: Map<string, number> = new Map();
 
@@ -44,7 +44,7 @@ class DVManager extends Component {
                 resolve(true);
             }
             this.registerEvent(
-                this.app.metadataCache.on("dataview:api-ready", () => {
+                (this.app.metadataCache as any).on("dataview:api-ready", () => {
                     this.api = getAPI();
                     resolve(true);
                 })
