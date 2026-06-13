@@ -5,7 +5,7 @@
   "copyContentButton": true,
   "customFormulas": [],
   "displayFormulaForMod": true,
-  "displayResultsInline": true,
+  "displayResultsInline": false,
   "displayFormulaAfter": true,
   "escapeDiceMod": true,
   "signed": false,
@@ -160,6 +160,20 @@
       "resultText": "2d6 + d4 + 1\n[4, 6] + [1] + 1",
       "timestamp": 1781386879701,
       "id": "T_UzC0PV0Dme"
+    },
+    {
+      "result": "12",
+      "original": "2d6 + d4 + 1",
+      "resultText": "2d6 + d4 + 1\n[4, 6] + [1] + 1",
+      "timestamp": 1781387909774,
+      "id": "o4M50J7VuSME"
+    },
+    {
+      "result": "9",
+      "original": "2d6 + d4 + 1",
+      "resultText": "2d6 + d4 + 1\n[2, 2] + [4] + 1",
+      "timestamp": 1781387913634,
+      "id": "rbOzyHkMjeo0"
     }
   ]
 }
